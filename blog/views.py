@@ -16,8 +16,8 @@ def post_new(request):
         form = PostForm(request.POST)
         if form.is_valid():
             post = form.save(commit=False)
-            post.author = request.user
-            post.yayinlanma_tarihi = timezone.now()
+            post.yazar = request.user
+            post.published_date = timezone.now()
             post.save()
             return redirect('blog.views.post_detail', pk=post.pk)
     else:
@@ -29,7 +29,7 @@ def post_edit(request, pk):
         form = PostForm(request.POST, instance=post)
         if form.is_valid():
             post = form.save(commit=False)
-            post.author = request.user
+            post.yazar = request.user
             post.published_date = timezone.now()
             post.save()
             return redirect('blog.views.post_detail', pk=post.pk)
