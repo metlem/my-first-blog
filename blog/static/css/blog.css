@@ -27,6 +27,15 @@ h1 a {
 h1, h2, h3, h4 {
     font-family: 'Russo One', sans-serif;
 }
+h1:hover{
+    color:green;
+    font-weight: 900;
+    background-color: white;
+    text-decoration:none;
+}
+.post h1{
+    text-decoration:none;
+}
 
 .date {
     float: right;
@@ -42,7 +51,7 @@ h1, h2, h3, h4 {
 }
 
 .top-menu, .top-menu:hover, .top-menu:visited {
-    color: #ffffff;
+    color: black;
     float: right;
     font-size: 26pt;
     margin-right: 20px;
@@ -55,4 +64,20 @@ h1, h2, h3, h4 {
 .post h1 a, .post h1 a:visited {
     color: #000000;
 }
-
+hr{
+    display: block;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    margin-left: auto;
+    margin-right: auto;
+    border-style: inset;
+    border-width: 1px;
+    width: 750px;
+    height: 0.5px;
+}
+.post h1 a{
+    text-decoration:none;
+}
+.post h1 a:hover{
+    font-weight: 1200;
+}
