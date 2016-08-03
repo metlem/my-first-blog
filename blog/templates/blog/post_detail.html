@@ -6,12 +6,15 @@
             <div class="date">
                 {{ post.yayinlanma_tarihi }}
             </div>
+        {% else %}
+            <a class="btn btn-default" href="{% url 'blog.views.post_publish' pk=post.pk %}">Yayınla</a>
+            <a class="btn btn-default" href="{% url 'post_remove' pk=post.pk %}"><span class="glyphicon glyphicon-remove"></span></a>
         {% endif %}
 		{% if user.is_authenticated %}
 		<a class="btn btn-default" href="{% url 'post_edit' pk=post.pk %}"><span class="glyphicon glyphicon-pencil"></span></a>
 		{% endif %}
         <h1>{{ post.baslik }}</h1>
         <p>{{ post.yazi|linebreaks }}</p>
-        
+
     </div>
 {% endblock %}
