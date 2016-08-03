@@ -1,26 +1,31 @@
 h1 a {
-    color: #FCA205;
-    font-family: 'Lobster';
+    color: black;
+    font-family: 'Russo One';
 }
-
+.page-header img{
+    width: 900px;
+    height: 150px;
+    margin: 0px 0px 0px 370px;
+}
 .page-header {
-    background-color: #00aae4;
+    /*background-color: #00aae4;*/
+    
     margin-top: 0;
-    padding: 20px 20px 20px 40px;
+    padding: 40px 40px 40px 40px;
 }
 
 .page-header h1, .page-header h1 a, .page-header h1 a:visited, .page-header h1 a:active {
-    color: 	#ffffff;
+    color: 	black;
     font-size: 36pt;
     text-decoration: none;
 }
 
 .content {
-    margin-left: 40px;
+    margin-left: 270px;
 }
 
 h1, h2, h3, h4 {
-    font-family: 'Lobster', cursive;
+    font-family: 'Russo One', sans-serif;
 }
 
 .date {
