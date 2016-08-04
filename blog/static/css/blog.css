@@ -81,3 +81,7 @@ hr{
 .post h1 a:hover{
     font-weight: 1200;
 }
+
+.comment {
+    margin: 20px 20px 20px 20px;
+}
