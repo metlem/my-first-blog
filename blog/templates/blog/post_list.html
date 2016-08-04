@@ -1,36 +1,19 @@
 {% extends 'blog/base.html' %}
 {% load staticfiles %}
-<html>    <head>
-        <title>Meltem'in Blogu</title>
-		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
-		<link rel="stylesheet" href="{% static 'css/blog.css' %}">
-        <link href="http://fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css">
-		
-		
-    </head>
-    <body>
-        {% block content %}
-            {% for post in posts %}
-                <div class="post">
-                    <div class="date">
-                        {{ post.yayinlanma_tarihi }}
-                    </div>
-                <h1><a href="{% url 'post_detail' pk=post.pk %}">{{ post.baslik }}</a></h1>
-                    <p>{{ post.yazi|linebreaks }}</p>
-                </div>
-                <hr>
-            {% endfor %}
-			
+
+{% block content %}
+    {% for post in posts %}
+        <div class="post">
+            <div class="date">
+                {{ post.yayinlanma_tarihi }}
+            </div>
+            <h1><a href="{% url 'post_detail' pk=post.pk %}">{{ post.baslik }}</a></h1>
+            <p>{{ post.yazi|linebreaks }}</p>
+        </div>
+        <hr>
+    {% endfor %}
+{% endblock content %}
         </div>
     </div>
 </div>
 
-  <div class="carousel-inner" role="listbox">
-    <div class="item active">
-      <img src="http://lorempixel.com/image_output/cats-q-c-1000-500-5.jpg" alt="Chania">
-    </div>
-
-    </body>
-</html>
-{% endblock content %}
