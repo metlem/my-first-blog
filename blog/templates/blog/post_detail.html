@@ -21,7 +21,7 @@
 
 
     <hr>
-    <a class="btn btn-default" href="{% url 'add_comment_to_post' pk=post.pk %}">Yorum Ekle</a>
+    <a class="btn btn-default" href="{% url 'add_comment_to_post' pk=post.pk %}">Yorum Ekle</a><li>Yorumunu onaylandıktan sonra görebilirsin :)</li>
     {% for comment in post.comments.all %}
         {% if user.is_authenticated or comment.onaylanmis_yorum %}
         <div class="comment">
@@ -37,8 +37,9 @@
         </div>
         {% endif %}
     {% empty %}
-        <li>Haydi ilk yorumu sen ekle!</li>
-        <li>Yorumunu onaylandıktan sonra görebilirsin :)</li>
+        <li>Henüz bir yorum yok.Haydi ilk yorumu sen ekle!</li>
+
+        
     {% endfor %}
 
 {% endblock %}
