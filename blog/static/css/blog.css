@@ -85,3 +85,15 @@ hr{
 .comment {
     margin: 20px 20px 20px 20px;
 }
+.post a{
+    color: black;
+    font-family: 'Russo One';
+    font-size: bold;
+    text-decoration:none;
+}
+.post a:hover{
+    color:green;
+    font-weight: 900;
+    background-color: white;
+    text-decoration:none;
+}
