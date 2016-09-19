@@ -54,7 +54,7 @@ def post_draft_list(request):
 @login_required
 def post_publish(request, pk):
     post = get_object_or_404(Post, pk=pk)
-    post.publish()
+    post.yayinla()
     return redirect('blog.views.post_detail', pk=pk)
 
 @login_required
