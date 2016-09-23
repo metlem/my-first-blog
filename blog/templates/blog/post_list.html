@@ -6,7 +6,16 @@
                 {{ post.yayinlanma_tarihi }}
             </div>
             <h1><a href="{% url 'post_detail' pk=post.pk %}">{{ post.baslik }}</a></h1>
-            <p>{{ post.yazi|linebreaks }}</p>
+
+            <div class = "post_body">
+            	
+            	{{ post.yazi|safe|truncatewords:"50"|linebreaks }}
+
+		        <a href="{% url 'post_detail' pk=post.pk %}">Daha Fazlasını Oku</a>
+		       	
+            
+             
+            </div>
             <a href="{% url 'blog.views.post_detail' pk=post.pk %}">Yorumlar: {{ post.comments.count }}</a>
         </div>
         <hr>

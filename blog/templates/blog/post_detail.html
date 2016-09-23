@@ -9,7 +9,7 @@
                 {{ post.yayinlanma_tarihi }}
             </div>
         {% else %}
-            <a class="btn btn-default" href="{% url 'blog.views.post_publish' pk=post.pk %}">Yayınla</a>
+            <a class="btn btn-default" href="{% url 'post_publish' pk=post.pk %}">Yayınla</a>
             <a class="btn btn-default" href="{% url 'post_remove' pk=post.pk %}"><span class="glyphicon glyphicon-remove"></span></a>
         {% endif %}
 
@@ -19,7 +19,7 @@
 		{% endif %}
         <h1>{{ post.baslik }}</h1>
         <p>{{ post.yazi|linebreaks }}</p>
-
+ 
     </div>
 
 
