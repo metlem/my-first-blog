@@ -4,6 +4,7 @@
     <h1>Yeni Yorum</h1>
     <form method="POST" class="post-form">{% csrf_token %}
         {{ form.as_p }}
+        <li>Yorumunu onaylandıktan sonra görebilirsin :)</li>
         <button type="submit" class="save btn btn-default">Gönder</button>
     </form>
 {% endblock %}
