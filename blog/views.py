@@ -6,9 +6,6 @@ from .forms import PostForm,CommentForm
 from django.shortcuts import redirect
 from django.contrib.auth.decorators import login_required
 
-
-
-
 def post_list(request):
     posts = Post.objects.filter(yayinlanma_tarihi__lte=timezone.now()).order_by('yayinlanma_tarihi')
     return render(request, 'blog/post_list.html', {'posts': posts})
@@ -84,6 +81,7 @@ def comment_remove(request, pk):
     post_pk = comment.post.pk
     comment.delete()
     return redirect('blog.views.post_detail', pk=post_pk)
+
 @login_required
 def comment_approve(request, pk):
     comment = get_object_or_404(Comment, pk=pk)
